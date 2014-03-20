@@ -1,0 +1,132 @@
+/* CLEAR CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+/* remember to define focus styles! */
+:focus {outline: 0;}
+/* remember to highlight inserts somehow! */
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+
+
+html {
+    overflow: auto;
+
+    background-color: black;
+    background-image: url('bg.gif');
+}
+body {
+	
+	font-size: 18px;
+	font-family: Arial Narrow, sans-serif;
+	font-weight: 100;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#outer {
+    height: 100%; /* В этом случае нельзя использовать min-height. Для таблиц (элементов с display: table) мир устроен иначе */
+    display: table;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+#middle {
+    display: table-row;
+    vertical-align: middle;
+}
+
+#inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#content {
+	max-width: 500px;
+	margin: 50px;
+	color: #fff;
+}
+
+h1,h2,h3 {
+	color: gray;
+	margin: 1em 0;
+}
+	h1 {font-size: 1.4em; text-align: center; color: rgb(124, 40, 29);}
+	h2 {font-size: 1.2em;}
+	h3 {font-size: 1em;}
+i,b,s,u {
+	color: gray;
+}
+	u {
+		text-decoration: none;
+		border-bottom: 1px dotted rgb(124, 40, 29);
+	}
+a {
+	color: gray;
+	text-decoration: none;
+}
+	a:hover {
+		color:white;
+		text-decoration: underline;
+	}
+
+p {
+	margin: 1em 0;
+	text-indent: 1em;
+}
+section {
+	display: none;
+}
+.ill {
+	position: fixed;
+	z-index: -1;
+	opacity: 0.2;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+header {
+	display: block;
+	overflow: hidden;
+}
+	header .action {text-align:left;}
+	header .action:before {content: "✓ ";}
+	header .view {text-align: right;}
+	header .time {text-align: right;}
+	header .time:after {content: " ⌚";}
+
+menu {
+	padding: 0;
+}
+	menu > * {
+		border: 1px dotted;
+		display: inline-block;
+		padding: 0.2em;
+		margin: 0.2em 0;
+	}
+	menu > *:hover {border-style: solid;}
+	menu .action {text-align: left;}
+	menu .action:hover {text-decoration: none;}
+	menu .action:before {content: "☐ ";}
+	menu .action:hover:before {content: "☑ ";}
+	menu .view {float:right;clear:both;}
+	menu .view:hover {text-decoration: none;}
+	menu .view:after {content: " ⌾";}
+	menu .next:before {content: "⍈ ";}
+
+.action {
+	color: rgb(124, 40, 29);
+}
+.view {
+
+}
